@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/JavaScript" src="js/main.js">
+    </script>
+</head>
+<style>
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    li{
+        display: inline-block;
+        margin-right: 25px;
+    }
+</style>
+
+<body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="ratingcalculator.html"> Calculator</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form>
+        <h1>Team 1:</h1>
+            <input type="text" id="user_player1" placeholder="Search for player..." onchange="findPlayer(1)"/>
+            Rating:
+                <span id = "rating1"></span>
+                    Main:
+                <span id = "main1"></span><br>
+                <input type="text" id="user_player2" placeholder="Search for player..." onchange="findPlayer(2)" />
+            Rating:
+                <span id = "rating2"></span>
+                    Main:
+                <span id = "main2"></span>
+            <h2>Avg Rating:
+                <span id = "team1_rating"></span>
+                <span id = "team1wP"></span></h2>
+            <h1>Team 2:</h1>
+                <input type="text" id="user_player3" placeholder="Search for player..." onchange="findPlayer(3)"/>
+            Rating:
+                <span id = "rating3"></span>
+                    Main:
+                <span id = "main3"></span><br>
+                <input type="text" id="user_player4" placeholder="Search for player..." onchange="findPlayer(4)" />
+            Rating:
+                <span id = "rating4"></span>
+                    Main:
+                <span id = "main4"></span><br>
+            <h2>Avg Rating:
+                <span id = "team2_rating"></span>
+                <span id = "team2wP"></span></h2>
+                <select id="bestof" class="inputRequired">
+                    <option value="Select">Best of...</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="1">1</option>
+                </select><br>
+                Won games by team 1:<br>
+                    <input type="checkbox" id="match0"/>
+                    <input type="checkbox" id="match1"/>
+                    <input type="checkbox" id="match2"/>
+                    <input type="checkbox" id="match3"/>
+                    <input type="checkbox" id="match4"/>        
+                <input type="button" onClick="hocusPocus()" Value="Enter" /><br>
+                <span id = "matchx"></span><br><br>
+                <span id = "newrating1"></span><br>
+                <span id = "newrating2"></span><br>
+                <span id = "newrating3"></span><br>
+                <span id = "newrating4"></span><br>
+                <input type="button" onClick="updateRatings()" Value="Confirm" /><br><br>
+                <span id = "showconfirmed"></span>
+        </form>
+    </body>
+    </html>
