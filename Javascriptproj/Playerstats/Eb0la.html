@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Eb0la</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Eb0la</h1> 
+            <p>A.K.A - <i>Kal el</i></p>
+            <br><h3>Is known for playing his <i>Black Link</i> and had a dominating match against <a href="Avvan.html">Avvan</a> at SSE-MI 2016, where Avvans <i>DK</i>
+                barely touched Eb0las <i>Link</i>. The year after at SSE-II 2017 he once again showed dominance 
+                placing 2nd with his teammate <a href="Mikka.html">Mikka</a>. 
+                Eb0la is a defensive player relying on space between him and his opponent so he can stack up damage with projectiles. 
+                When he's on fire he's one of the most exciting players to watch.
+                <br><i>Does Eb0la rely on a tank teammate?</i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>5th at SSE-II | 2018 (Doubles)</li>
+                    <li>2nd at SSE-II | 2017 (Doubles)</li>
+                    <li>9th at SSE-MI | 2016 (Singles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [100, 65, 66, 70, 67, 15, 40, 100],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

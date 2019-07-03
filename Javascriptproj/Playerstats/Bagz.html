@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Bagz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Bagz</h1> 
+            <p>A.K.A - <i>Bagge</i></p>
+            <br><h3>Probably one of the most unexpected players to reach a grand final. 
+                Namely, Bagz played his first tournament 2017 at SSE-II with <a href="Zeor.html">Zeor</a>
+                who was considered one of the better, and together they finished last. 
+                At SSE-II 2018 the year after though, he switched main from <i>Lucario</i> to <i>Bowser</i> teamed
+                with <a href="LTR.html">LTR</a> and finished at 2nd place.   
+                <br><i>Can Bagz stick to his rating?</i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>2nd at SSE-II | 2018 (Doubles)</li>
+                    <li>9th at SSE-II | 2017 (Doubles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [100, 10, 9, 16, 7, 8, 10, 100],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

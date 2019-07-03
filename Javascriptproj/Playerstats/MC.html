@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | MC</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>MC</h1> 
+            <p>A.K.A - <i>N/A</i></p>
+            <br><h3>Is one of the founders of Skrallgaming but never joined the Smash community until 2016 at SSE-MI.
+                At this event he finished 9th, only defeating <a href="JS.html">JS</a>. The year after at SSE-LI, MC together with 
+                his teamate <a href="Anttown.html">Anttown</a> in <i>B-boyz</i> formed today's <a href="XX"><i>Bowser Meta</i></a>. 
+                Though placing last that tournament, they made a huge impact on the meta game.
+                MC is one of two <i>Cpt. Falcon</i> mains and actually manages to do combos with his special abilites which is a pleseant sight
+                for the crowd.
+                At SSE-II 2018 he got his best placing yet, teaming up with <a href="Eb0la.html">Eb0la</a> defeating <a href="R.html">R</a> and
+                <a href="YOLOwille.html">YOLOwille</a>.
+                <br><i>WIll MC surpass Habo's rating?</i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>5th at SSE-II | 2018 (Doubles)</li>
+                    <li>7th at SSE-LI | 2017 (Doubles Melee)</li>
+                    <li>7th at SSE-LI | 2017 (Doubles)</li>
+                    <li>9th at SSE-MI | 2016 (Singles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [100, 65, 66, 70, 67, 15, 40, 100],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

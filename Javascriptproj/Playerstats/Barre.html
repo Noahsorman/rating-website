@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Barre</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Barre</h1> 
+            <p>A.K.A - <i>Nugget</i></p>
+            <br><h3>Joined SG in late <i>SS3B</i> times. He came as an underdog, never touched the game but quickly rose to become one of the best, currently ranked #4.
+                Barre started out as a very defensive player who excelled in projectiles and spacing with characters such as <i>Link</i> and <i>Lucario</i>. 
+                Despite <i>Lucario</i> seeming to be a perfect fit for Barre, the character was also his downfall as Barre couldn't control his recovery very well. 
+                At SSE-MI 2016 he was very close of beating a god (<a href="LTR.html">LTR</a>) 1v1 ending the set 2-3, placing 3rd. 
+                SSE-LI 2017  was a down-time for Barre where he finished last, and also 5th in the unranked melee tournament.
+                So, 2017 being his <i>Link</i> year, he as some others, swapped to main <i>Cloud</i> for 2018. 
+                After the first SSE-II event (2017) he seemed to be rising towards his previously expected potential finishing 4th. 
+                Sadly, the year after, he finished last once again. This leaves Barre very fluid and unpredictable.. 
+                His 1v1 skills are easily considered one of the best, but he may depend too much on his team combination during tournaments.
+                <br><i>Where do barre stand? At rank 3? or maybe 7? </i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>7th at SSE-II | 2018 (Doubles)</li>
+                    <li>4th at SSE-II | 2017 (Doubles)</li>
+                    <li>5th at SSE-LI | 2017 (Doubles Melee)</li>
+                    <li>7th at SSE-LI | 2017 (Doubles)</li>
+                    <li>3rd at SSE-MI | 2016 (Singles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [75, 65, 66, 70, 67, 15, 40, 10],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

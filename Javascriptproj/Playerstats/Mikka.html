@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | MIKKA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>MIKKA</h1> 
+            <p>A.K.A - <i>Mikka Tronkinen, Steeve The Speed</i></p>
+            <br><h3>Is one of Skrallgaming's founders and a veteran in the smash community since the <i>SS3B</i> times. 
+                He's currently ranked #1 and is one of two players above 1600 rating and may because of that be considered one of two gods.
+                Mikka is a fan of lightweighted characters such as <i>Mewtwo, Jigglypuff</i> and <i>Ness</i>, 
+                which fits his plastyle of wanting to fight off-stage. 
+                Although, in a 2v2-format with no 'team damage' he's said that he prefers heavier characters which is why he played 
+                <i>Ike</i> through most of 2017.
+                <br><br>Placings: 
+                <ul>
+                    <li>1st at SSE-II | 2018 (Doubles)</li>
+                    <li>2nd at SSE-II | 2017 (Doubles)</li>
+                    <li>1st at SSE-LI | 2017 (Melee Doubles)</li>
+                    <li>5th at SSE-LI | 2017 (Doubles)</li>
+                    <li>1st at SSE-MI | 2016 (Singles)</li>
+                </ul> </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [85, 90, 79, 78, 92, 60, 74, 80],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

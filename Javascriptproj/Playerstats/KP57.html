@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | KP57</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>KP57</h1> 
+            <p>A.K.A - <i>Kalle P</i></p>
+            <br><h3>Played his first and so far only event, 2017 at SSE-LI. 
+                He came as a true underdog that noone feared, since he only played FPS games.
+                However, together with <a href="LTR.html">LTR</a> 
+                they placed 1st aswell as 2nd in the unranked tournament! 
+                He picked up Kirby and instantly discovered the Down-B tactic which was already known for some old-timers,
+                but devastating for newer players to adapt to. It is hence today refered to as the 'Kalle P-tactic'.<br>
+                One tournament, one 1st placing and a tactic named after him, KP57 has earned his rank #7.
+                Some say LTR carried him, but Kp57 himself said the tournament was an easy win and that the game is trash.
+                <br><i>Will he stomp the haters?</i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>2nd at SSE-LI | 2017 (Doubles Melee)</li>
+                    <li>1st at SSE-LI | 2017 (Doubles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [48, 84, 30, 25, 66, 82, 70, 41],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

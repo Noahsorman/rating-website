@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Mangz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Mangz</h1> 
+            <p>A.K.A - <i>Mange</i></p>
+            <br><h3>Mangz is a main of one of the most popular mains in the community: '<i>Ganondorf</i>',.
+                but Mangz is the best ranked Ganondorf at #10. 
+                He played his first tournament at SSE-II 2018, teaming up with <a href="Mikka.html">Mikka</a> and placed 1st.
+                They had a rough start going to loser's bracket after the first match, and also lost the first set in Loser's Round 1.
+                Mangz though, is a very tactical player despite his brief experience in the game. 
+                They switched tactics, where Mangz played as a <i>Tank</i> while Mikka would
+                build up damage through projectiles and then edge guard. This tactic got them to grand finals and finally won the tournament.
+                <br><i>Will his tactics sustain his ranking?</i>
+                <br><br>Placings: 
+                <ul>
+                    <li>1st at SSE-II | 2018 (Doubles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx,   
+        {
+            type: 'radar',
+            data: {
+            labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+            datasets: [
+                {
+                    label: '',
+                    backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                    borderColor: 'rgba(149, 33, 243, 1)',
+                    borderWidth: 2,
+                    data: [60, 34, 45, 8, 12, 90, 10, 51],
+                    pointBackgroundColor: 'white',
+                },{
+                    label: '',
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    borderColor: 'rgba(0, 0, 0, 0)',
+                    data: [100, 100, 100, 100, 100],}
+                ]
+            },
+            options: {
+                legend:{
+                    display: false,
+                    },
+                scale: {
+                    reverse: false,
+                    ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 3,
+                        display: false
+                        },
+                    pointLabels: {
+                        fontSize: 20,
+                        fontColor: 'white'
+                        },
+                    gridLines:{
+                        color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                        },
+                    angleLines:{ 
+                        color: 'rgba(255,255,255,0.3)' 
+                        },
+                    }
+                },
+    });
+            </script>
+</body>
+</html>

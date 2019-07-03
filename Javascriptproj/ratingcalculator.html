@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SKRALLGAMING</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <script type="text/JavaScript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="ratingcalculator.css">
+</head>
+
+<header>
+        <nav>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" name="" onclick="location.href='ratings.html';">
+                            <div class="icon-box">
+                                <i class="fa fa-bar-chart" aria-hidden="true">
+                                </i>
+                            </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="" onclick="location.href='ratingcalculator.html';">
+                        <div class="icon-box">
+                            <i class="fa fa-calculator" aria-hidden="true">
+                                <a href="ratingcalculator.html" target="_blank"></a>
+                            </i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="" onclick="location.href='forums.html';">
+                        <div class="icon-box">
+                            <i class="fa fa-newspaper-o" aria-hidden="true">
+                                <a href="forums.html" target="_blank"></a>
+                            </i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <div class="icon-box">
+                            <i class="fa fa-television" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="">
+                        <div class="icon-box">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+</header>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 text-right">
+                <span class="dot-border">
+                    <span class="dot">
+                        <h1>Team 1
+                            <p>Avg rating:</p><span class="team1_rating" id = "team1_rating"></span>
+                        </h1>
+                    </span>
+                </span>
+                <select id="select1" type="p">
+                    <option value="" disabled selected>-Choose Skraller-</option>
+                    <option value="mikka">Mikka</option>
+                    <option value="ltr">LTR</option>
+                    <option value="izizaki">Izizaki</option>
+                    <option value="barre">Barre</option>
+                    <option value="finch">Finch</option>
+                    <option value="chagzter">Chagzter</option>
+                    <option value="kp57">Kp57</option>
+                    <option value="abbe">Abbe</option>
+                    <option value="anttown">Anttown</option>
+                    <option value="mangz">Mangz</option>
+                    <option value="frudrunq">Frudrunq</option>
+                    <option value="avvan">Avvan</option>
+                    <option value="zeor">Zeor</option>
+                    <option value="r">R</option>
+                    <option value="bagz">Bagz</option>
+                    <option value="chog">Chog</option>
+                    <option value="eb0la">Eb0la</option>
+                    <option value="miley">Miley</option>
+                    <option value="jukdk">JukDk</option>
+                    <option value="jäger">Jäger</option>
+                    <option value="yolowille">YOLOwille</option>
+                    <option value="ymg">YMG</option>
+                    <option value="habo">Habo</option>
+                    <option value="mc">MC</option>
+                    <option value="js">JS</option>
+                    <option value="cpt.kön">Cpt. KöN</option>
+                </select>
+                <select id="select2" type="p">
+                    <option value="" disabled selected>-Choose Skraller-</option>
+                    <option value="mikka">Mikka</option>
+                    <option value="ltr">LTR</option>
+                    <option value="izizaki">Izizaki</option>
+                    <option value="barre">Barre</option>
+                    <option value="finch">Finch</option>
+                    <option value="chagzter">Chagzter</option>
+                    <option value="kp57">Kp57</option>
+                    <option value="abbe">Abbe</option>
+                    <option value="anttown">Anttown</option>
+                    <option value="mangz">Mangz</option>
+                    <option value="frudrunq">Frudrunq</option>
+                    <option value="avvan">Avvan</option>
+                    <option value="zeor">Zeor</option>
+                    <option value="r">R</option>
+                    <option value="bagz">Bagz</option>
+                    <option value="chog">Chog</option>
+                    <option value="eb0la">Eb0la</option>
+                    <option value="miley">Miley</option>
+                    <option value="jukdk">JukDk</option>
+                    <option value="jäger">Jäger</option>
+                    <option value="yolowille">YOLOwille</option>
+                    <option value="ymg">YMG</option>
+                    <option value="habo">Habo</option>
+                    <option value="mc">MC</option>
+                    <option value="js">JS</option>
+                    <option value="cpt.kön">Cpt.KöN</option>
+                </select>
+                <br><span class="dot-border">
+                <span class="dot2">
+                    <h1>Team 2
+                        <p>Avg rating:</p><span class="team2_rating" id = "team2_rating"></span>
+                    </h1>
+                </span>
+                </span>
+                <select id="select3" type="p" class="team2">
+                    <option value="" disabled selected>-Choose Skraller-</option>
+                    <option value="mikka">Mikka</option>
+                    <option value="ltr">LTR</option>
+                    <option value="izizaki">Izizaki</option>
+                    <option value="barre">Barre</option>
+                    <option value="finch">Finch</option>
+                    <option value="chagzter">Chagzter</option>
+                    <option value="kp57">Kp57</option>
+                    <option value="abbe">Abbe</option>
+                    <option value="anttown">Anttown</option>
+                    <option value="mangz">Mangz</option>
+                    <option value="frudrunq">Frudrunq</option>
+                    <option value="avvan">Avvan</option>
+                    <option value="zeor">Zeor</option>
+                    <option value="r">R</option>
+                    <option value="bagz">Bagz</option>
+                    <option value="chog">Chog</option>
+                    <option value="eb0la">Eb0la</option>
+                    <option value="miley">Miley</option>
+                    <option value="jukdk">JukDk</option>
+                    <option value="jäger">Jäger</option>
+                    <option value="yolowille">YOLOwille</option>
+                    <option value="ymg">YMG</option>
+                    <option value="habo">Habo</option>
+                    <option value="mc">MC</option>
+                    <option value="js">JS</option>
+                    <option value="cpt.kön">Cpt. KöN</option>
+                </select>
+                <select id="select4" type="p" class="team2">
+                    <option value="" disabled selected>-Choose Skraller-</option>
+                    <option value="mikka">Mikka</option>
+                    <option value="ltr">LTR</option>
+                    <option value="izizaki">Izizaki</option>
+                    <option value="barre">Barre</option>
+                    <option value="finch">Finch</option>
+                    <option value="chagzter">Chagzter</option>
+                    <option value="kp57">Kp57</option>
+                    <option value="abbe">Abbe</option>
+                    <option value="anttown">Anttown</option>
+                    <option value="mangz">Mangz</option>
+                    <option value="frudrunq">Frudrunq</option>
+                    <option value="avvan">Avvan</option>
+                    <option value="zeor">Zeor</option>
+                    <option value="r">R</option>
+                    <option value="bagz">Bagz</option>
+                    <option value="chog">Chog</option>
+                    <option value="eb0la">Eb0la</option>
+                    <option value="miley">Miley</option>
+                    <option value="jukdk">JukDk</option>
+                    <option value="jäger">Jäger</option>
+                    <option value="yolowille">YOLOwille</option>
+                    <option value="ymg">YMG</option>
+                    <option value="habo">Habo</option>
+                    <option value="mc">MC</option>
+                    <option value="js">JS</option>
+                    <option value="cpt.kön">Cpt.KöN</option>
+                </select>
+            </div>
+        </div>
+    </div>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+    <script>
+        $('#select1').select2();
+        $('#select2').select2();
+        $('#select3').select2();
+        $('#select4').select2();
+    </script>
+    <script>
+        document.getElementById("team1_rating").innerHTML = 1700;
+        document.getElementById("team2_rating").innerHTML = 1700;
+    </script>
+</body>
+</html>

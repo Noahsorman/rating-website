@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | R</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>R</h1> 
+            <p>A.K.A - <i>Bägarn</i></p>
+            <br><h3>Is an unexperienced Smash player, but a contrary Tekken player. 
+                He played his first tournament 2017 at SSE-II with <a href="Barre.html">Barre</a> 
+                defeating <a href="Finch.html">Finch</a> and placing 4th!
+                R is a main of <i>Falco</i> but also uses his secondaries alot, <i>Peach</i> for SSE-II 2017
+                and <i>Donkey Kong</i> for SSE-II 2018. Roughly for R, 2018 didn't go nowhere near the results of 2017;
+                this time he placed last in the tournament. R has been heard saying the smash tournament doesn't interest him.
+                Instead, he joins SSE for the Beer pong tournament where he finished 2nd 2017 and 1st 2018.
+                <br><i>How far can R's Tekken skills take him?</i>  
+                <br><br>Placings: 
+                <ul>
+                    <li>7th at SSE-II | 2018 (Doubles)</li>
+                    <li>4th at SSE-II | 2017 (Doubles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [29, 10, 9, 16, 7, 8, 10, 80],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

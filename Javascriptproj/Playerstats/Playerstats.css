@@ -1,0 +1,33 @@
+body{
+    background: linear-gradient(top, #3c3c3c 100%, #222222 100%);
+    background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+    margin-left: 33%
+}
+
+body div nav h1{
+    color: #008008;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0px;
+}
+body div nav p{
+    color: rgb(202, 202, 202);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 120%;
+}
+body div nav h3{
+    font-family: monospace;
+    color:white;
+    margin-top: 0px;
+    font-size: 110%;
+}
+ul, li{
+    margin-top: 0px;
+}
+a{
+    color: white;
+}
+a:visited{
+    color: rgba(205, 255, 208, 0);
+}

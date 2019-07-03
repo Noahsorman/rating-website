@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Anttown</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Anttown</h1> 
+            <p>A.K.A <i>Meta</i></p>
+            <br><h3>One of the founders of the <a href="XX"><i>Bowser Meta</i></a> 
+                together with his teamate <a href="MC.html">MC</a> from B-boyz at SSE-LI 2017. 
+                The founding set is to this date the most hyped set ever played at an SSE.
+                Despite his influence on the meta game regarding <i>Bowser</i> per se, Anttown was also one of firsts to main <i>Cloud</i>.
+                <br>Story short: At SSE-LI 2017 he co-invented a new meta game. At SSE-II 2017 he teamed up with (at the time) ranked #1 player <a href="LTR.html">LTR</a>
+                , finished 1st and exhibited the power of <i>Cloud</i>, that Barre and even LTR dittoed the year after.
+                <br><i>Will Anttown climb next event?</i>
+                <br><br>Placings: 
+                <ul>
+                    <li>1th at SSE-II | 2017 (Doubles)</li>
+                    <li>5th at SSE-LI | 2017 (Doubles Melee)</li>
+                    <li>5th at SSE-LI | 2017 (Doubles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx,   
+            {
+                type: 'radar',
+                data: {
+                labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+                datasets: [
+                    {
+                        label: '',
+                        backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                        borderColor: 'rgba(149, 33, 243, 1)',
+                        borderWidth: 2,
+                        data: [65, 52, 22, 31, 47, 88, 35, 46],
+                        pointBackgroundColor: 'white',
+                    },{
+                        label: '',
+                        backgroundColor: 'rgba(0, 0, 0, 0)',
+                        borderColor: 'rgba(0, 0, 0, 0)',
+                        data: [100, 100, 100, 100, 100],}
+                    ]
+                },
+                options: {
+                    legend:{
+                        display: false,
+                        },
+                    scale: {
+                        reverse: false,
+                        ticks: {
+                            beginAtZero: true,
+                            maxTicksLimit: 3,
+                            display: false
+                            },
+                        pointLabels: {
+                            fontSize: 20,
+                            fontColor: 'white'
+                            },
+                        gridLines:{
+                            color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                            },
+                        angleLines:{ 
+                            color: 'rgba(255,255,255,0.3)' 
+                            },
+                        }
+                    },
+        });
+                </script>
+    </body>
+    </html>

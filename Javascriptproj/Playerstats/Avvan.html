@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SG | Avvan</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="Chart.css" rel="stylesheet">
+    <link href="Playerstats.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div style="width: 700px">
+        <nav>
+            <h1>Avvan</h1> 
+            <p>A.K.A - <i>Arvoid</i></p>
+            <br><h3>Avvan made his first entry at SSE-MI 2016 where he picked up <i>Donkey Kong</i> as a main.
+                He had a rough time against quicker players as <a href="Miley.html">Miley</a> and projectories from
+                <a href="Eb0la.html">Eb0la</a>. The year after at SSE-LI 2017 he teamed up with <a href="Izizaki.html">Izizaki</a>
+                and were the first 'none-gods' to defeat a god in losers bracket. They defeated <a href="Mikka.html">Mikka</a>
+                and <a href="Habo.html">Habo</a> with the <a href="XX"><i>Bowser Meta</i></a>-tactic coined at the same tournament.
+                From <i>DK</i> to <i>Bowser</i> to a main-switch once again at SSE-II 2017 to <i>Duck Hunt Duo</i> building the <i>Duck Hunt Dream</i>-team
+                with <a href="Chagzter.html">Chagzter</a> where they defeated <a HREF="Barre.html">Barre</a> in winners, and ended 5th.
+                2018 at SSE-II, Avvan once again picked up <i>Bowser</i> and teamed up with <i>Izizaki</i>, the combination that defeated a god.
+                That year sending them to 3rd place. 
+                <br><i>Will he stick to Bowser?</i>
+                <br><br>Placings: 
+                <ul>
+                    <li>3rd at SSE-II | 2018 (Doubles)</li>
+                    <li>5th at SSE-II | 2017 (Doubles)</li>
+                    <li>4th at SSE-LI | 2017 (Doubles Melee)</li>
+                    <li>3rd at SSE-LI | 2017 (Doubles)</li>
+                    <li>9th at SSE-MI | 2016 (Singles)</li>
+                </ul> 
+            </h3>
+        </nav>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+    
+    
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx,   
+        {
+            type: 'radar',
+            data: {
+            labels: ['Defence', 'Recovery', 'Execution', 'Combos', 'Edge Guard', 'Tactics', 'Disrespect', 'Intoxication'],
+            datasets: [
+                {
+                    label: '',
+                    backgroundColor: 'rgba(149, 33, 243, 0.15)',
+                    borderColor: 'rgba(149, 33, 243, 1)',
+                    borderWidth: 2,
+                    data: [39, 41, 35, 28, 26, 39, 51, 42],
+                    pointBackgroundColor: 'white',
+                },{
+                    label: '',
+                    backgroundColor: 'rgba(0, 0, 0, 0)',
+                    borderColor: 'rgba(0, 0, 0, 0)',
+                    data: [100, 100, 100, 100, 100],}
+                ]
+            },
+            options: {
+                legend:{
+                    display: false,
+                    },
+                scale: {
+                    reverse: false,
+                    ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 3,
+                        display: false
+                        },
+                    pointLabels: {
+                        fontSize: 20,
+                        fontColor: 'white'
+                        },
+                    gridLines:{
+                        color:['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)', 'rgba(255,255,255,0.3)']
+                        },
+                    angleLines:{ 
+                        color: 'rgba(255,255,255,0.3)' 
+                        },
+                    }
+                },
+    });
+            </script>
+</body>
+</html>

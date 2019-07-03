@@ -1,0 +1,14 @@
+body{
+    background: rgb(0, 0, 0);
+    image-rendering:pixelated;
+    background-blend-mode: screen;
+    background-size: 150%; 
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+}
+header nav ul li label .icon-box .fa.fa-newspaper-o{
+    color: #fff;
+    text-shadow: 0 0 10px rgb(0, 117, 45),
+                 0 0 10px rgb(0, 117, 45);
+}
