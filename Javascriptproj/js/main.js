@@ -104,7 +104,7 @@ var playerlist = {
         "rating":1387,
         "main":"Kirby"
     },
-    "cpt.kön": {
+    "cpt. kön": {
         "rating":1387,
         "main":"?"
     }
